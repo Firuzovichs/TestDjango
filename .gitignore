@@ -1,0 +1,38 @@
+# Python fayllari
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+*.log
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Virtual environment
+venv/
+env/
+
+# IDE va kod muharrirlari uchun
+.vscode/
+.idea/
+*.iml
+
+# Media va statik fayllar
+media/
+staticfiles/
+static/
+
+# Secret va konfiguratsiya fayllari
+.env
+config.json
+*.pem
+
+# Docker
+docker-compose.override.yml
+
+# Node.js va frontend (agar ishlatilsa)
+node_modules/
+package-lock.json
+yarn.lock
