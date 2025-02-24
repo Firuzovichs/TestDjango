@@ -42,7 +42,7 @@ class ExcelUpload(models.Model):
             )
 
 class TestResult(models.Model):
-    fish = models.CharField(max_length=255)  # Foydalanuvchining FISH
+    fish = models.CharField(max_length=2048)  # Foydalanuvchining FISH
     correct_answers = models.IntegerField(default=0)  # To'g'ri javoblar soni
     incorrect_answers = models.IntegerField(default=0)  # Noto'g'ri javoblar soni
     percentage = models.FloatField(default=0.0)  # To'g'ri javoblar foiz hisobida
@@ -58,4 +58,4 @@ class TestResult(models.Model):
         self.save()
 
     def __str__(self):
-        return f"{self.fish} - {self.percentage:.2f}%"
+        return f"{self.fish} - {self.percentage:.2f}% - {self.time.strftime("%H:%M")}"
