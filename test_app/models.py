@@ -47,6 +47,7 @@ class TestResult(models.Model):
     incorrect_answers = models.IntegerField(default=0)  # Noto'g'ri javoblar soni
     percentage = models.FloatField(default=0.0)  # To'g'ri javoblar foiz hisobida
     time_recorded = models.TimeField(auto_now_add=True)  # Faqat vaqtni saqlaydi
+    time = models.TimeField()
     def calculate_percentage(self):
         """To'g'ri javoblar foizini hisoblash"""
         total = self.correct_answers + self.incorrect_answers
