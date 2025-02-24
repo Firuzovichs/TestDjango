@@ -23,4 +23,4 @@ class TestQuestionSerializer(serializers.ModelSerializer):
 class TestResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = TestResult
-        fields = ['id', 'fish', 'correct_answers', 'incorrect_answers', 'percentage']
+        fields = ['id', 'fish', 'correct_answers', 'incorrect_answers', 'percentage','time_recorded']
