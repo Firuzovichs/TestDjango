@@ -58,4 +58,4 @@ class TestResult(models.Model):
         self.save()
 
     def __str__(self):
-        return f"{self.fish} - {self.percentage:.2f}% - {self.time.strftime("%H:%M")}"
+        return f"{self.fish} - {self.percentage:.2f}% - {self.time}"
