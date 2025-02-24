@@ -20,7 +20,6 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
     ],
 }
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -59,7 +58,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myproject.urls'
 CORS_ALLOW_ALL_ORIGINS = True  # Barcha domenlarga ruxsat berish
-CORS_ALLOW_CREDENTIALS = True  # Cookie va autentifikatsiya ma'lumotlarini ruxsat berish
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -75,7 +74,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
