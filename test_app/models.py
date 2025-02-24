@@ -3,14 +3,14 @@ import pandas as pd
 from io import BytesIO
 
 class TestQuestion(models.Model):
-    question = models.CharField(max_length=255)
-    answer_1 = models.CharField(max_length=255)
+    question = models.CharField(max_length=2048)
+    answer_1 = models.CharField(max_length=1024)
     is_correct_1 = models.BooleanField(default=False)
-    answer_2 = models.CharField(max_length=255)
+    answer_2 = models.CharField(max_length=1024)
     is_correct_2 = models.BooleanField(default=False)
-    answer_3 = models.CharField(max_length=255)
+    answer_3 = models.CharField(max_length=1024)
     is_correct_3 = models.BooleanField(default=False)
-    answer_4 = models.CharField(max_length=255)
+    answer_4 = models.CharField(max_length=1024)
     is_correct_4 = models.BooleanField(default=False)
 
     def __str__(self):
