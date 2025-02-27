@@ -29,3 +29,4 @@ class TimeApiView(APIView):
 
         # Serializatsiya qilish
         serializer = TimeSerializer(questions, many=True)
+        return Response(serializer.data)
