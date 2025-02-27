@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import TestQuestion,TestResult
-from .serializers import TestQuestionSerializer,TestResultSerializer
+from .models import TestQuestion,TestResult,TimeModel
+from .serializers import TestQuestionSerializer,TestResultSerializer,TimeSerializer
 import random
 from rest_framework import generics
 
@@ -21,3 +21,11 @@ class RandomTestQuestionsAPIView(APIView):
 class TestResultListCreateAPIView(generics.ListCreateAPIView):
     queryset = TestResult.objects.all()
     serializer_class = TestResultSerializer
+
+class TimeApiView(APIView):
+    def get(self, request):
+        # TestQuestion modelidan barcha savollarni olish
+        questions = list(TimeModel.objects.all())
+
+        # Serializatsiya qilish
+        serializer = TimeSerializer(questions, many=True)

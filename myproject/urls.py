@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from test_app.views import RandomTestQuestionsAPIView,TestResultListCreateAPIView
+from test_app.views import RandomTestQuestionsAPIView,TestResultListCreateAPIView,TimeApiView
 
 
 urlpatterns = [
     path('api/v1/admin/', admin.site.urls),
     path('api/v1/random-tests/', RandomTestQuestionsAPIView.as_view(), name='random-tests'),
     path('api/v1/test-results/', TestResultListCreateAPIView.as_view(), name='test-results'),
+    path('api/v1/times/', TimeApiView.as_view(), name="time-get")
 ]

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import TestQuestion,TestResult
+from .models import TestQuestion,TestResult,TimeModel
 import random
 
 class TestQuestionSerializer(serializers.ModelSerializer):
@@ -24,3 +24,8 @@ class TestResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = TestResult
         fields = ['id', 'fish', 'correct_answers', 'incorrect_answers', 'percentage','time_recorded','time']
+
+class TimeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TimeModel
+        fields = ['__all__']

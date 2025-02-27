@@ -59,3 +59,10 @@ class TestResult(models.Model):
 
     def __str__(self):
         return f"{self.fish} - {self.percentage:.2f}% - {self.time}"
+
+
+class TimeModel(models.Model):
+    time = models.TimeField(default="00:00")  # Yoki boshqa standart vaqt
+
+    def __str__(self):
+        return f"{self.time}"
