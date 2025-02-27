@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import TestQuestion,ExcelUpload,TestResult
+from .models import TestQuestion,ExcelUpload,TestResult,TimeModel
 # Register your models here.
-admin.site.register([ExcelUpload,TestResult])
+admin.site.register([ExcelUpload,TestResult,TimeModel])
 class TestQuestionAdmin(admin.ModelAdmin):
     list_display = ('id', 'question', 'is_correct_1', 'is_correct_2', 'is_correct_3', 'is_correct_4')  # Ko'rinadigan maydonlar
     search_fields = ('question',)  # Qidirish imkoniyati
