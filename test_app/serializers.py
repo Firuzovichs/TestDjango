@@ -28,4 +28,4 @@ class TestResultSerializer(serializers.ModelSerializer):
 class TimeSerializer(serializers.ModelSerializer):
     class Meta:
         model = TimeModel
-        fields = ['__all__']
+        fields = '__all__'
